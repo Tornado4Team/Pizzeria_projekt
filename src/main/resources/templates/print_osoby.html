@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" >
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+  <title>Lista transakcji</title>
+</head>
+
+<body>
+
+
+<div class="container">
+  <h4>   <strong th:text="${header}"/>  </h4>
+
+</div>
+
+
+<div class="container">
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <thead>
+      <tr  class="active">
+        <th>Imię</th>
+        <th>Nazwisko</th>
+        <th>E-mail</th>
+        <th>Telefon</th>
+        <th>Miasto</th>
+        <th>Poczta</th>
+        <th>Ulica</th>
+        <th>Mieszkanie</th>
+        <th>Login</th>
+        <th>Typ</th>
+      </tr>
+
+      </thead>
+      <tbody>
+      <tr th:each ="osoba : ${osobaList}">
+
+        <td> <b  th:utext="${osoba.imie}">...</b> </td>
+        <td> <b  th:utext="${osoba.nazwisko}">...</b> </td>
+        <td> <b  th:utext="${osoba.email}">...</b> </td>
+        <td> <b  th:utext="${osoba.telefon}">...</b> </td>
+        <td> <b  th:utext="${osoba.miasto}">...</b> </td>
+        <td> <b  th:utext="${osoba.poczta}">...</b> </td>
+        <td> <b  th:utext="${osoba.ulica}">...</b> </td>
+        <td> <b  th:utext="${osoba.mieszkanie}">...</b> </td>
+        <td> <b  th:utext="${osoba.login}">...</b> </td>
+        <td> <b  th:utext="${osoba.typ}">...</b> </td>
+
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <a href="/index.html">Strona główna </a>
+
+</div>
+
+
+</body>
+</html>
